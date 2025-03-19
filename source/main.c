@@ -5,11 +5,22 @@
 
 #define SIZE 9
 
+void printBoard(int board[SIZE][SIZE]){
+    for(int i=0; i<SIZE; i++){
+        for(int j=0; j < SIZE; j++){
+            printf("%d", board[i][j]);
+        }
+        printf("\n");
+    }
+
+
+}
 
 bool solver(int board[SIZE][SIZE]){
 
-    
+
 }
+
 
 
 int main(){
@@ -32,16 +43,18 @@ int board[SIZE][SIZE]= {
     {0, 6, 0,   0, 0, 0,   2, 8, 0},
     {0, 0, 0,   4, 1, 9,   0, 0, 5},
     {0, 0, 0,   0, 8, 0,   0, 7, 9}
+
+
+};
+
+// Prints board
+printBoard(board);
+
+
+
+
 }
 
-// Press 1 to solve it yourself
 
-
-// Press 2 let the robot solve it.
-
-
-
-
-}
 
 
