@@ -5,6 +5,7 @@
 
 #define SIZE 9
 
+// This function prints the sudoku board
 void printBoard(int board[SIZE][SIZE]){
     for(int i=0; i<SIZE; i++){
         for(int j=0; j < SIZE; j++){
@@ -15,7 +16,7 @@ void printBoard(int board[SIZE][SIZE]){
 
 
 }
-
+// Function that solves the sudoku and returs true or false depending on succes/or not
 bool solver(int board[SIZE][SIZE]){
 
 
