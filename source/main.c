@@ -16,6 +16,13 @@ void printBoard(int board[SIZE][SIZE]){
 
 
 }
+
+// Function that check if placing num at board[][] is valid
+bool isValid(int board[SIZE][SIZE], int row. int col, int num){
+    
+}
+
+
 // Function that solves the sudoku and returs true or false depending on succes/or not
 bool solver(int board[SIZE][SIZE]){
 
