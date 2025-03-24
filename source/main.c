@@ -18,9 +18,28 @@ void printBoard(int board[SIZE][SIZE]){
 }
 
 // Function that check if placing num at board[][] is valid
-bool isValid(int board[SIZE][SIZE], int row. int col, int num){
+bool isValid(int board[SIZE][SIZE], int row, int col, int num){
+     // Check the row and column.
+     for (int i = 0; i < SIZE; i++) {
+        if (board[row][i] == num || board[i][col] == num)
+            return false;
+    }
     
+    // Determine the top-left coordinates of the 3x3 subgrid.
+    int startRow = row - row % 3;
+    int startCol = col - col % 3;
+    
+    // Check the 3x3 subgrid.
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (board[startRow + i][startCol + j] == num)
+                return false;
+        }
+    }
+    
+    return true;
 }
+
 
 
 // Function that solves the sudoku and returs true or false depending on succes/or not
