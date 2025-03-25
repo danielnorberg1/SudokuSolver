@@ -42,9 +42,44 @@ bool isValid(int board[SIZE][SIZE], int row, int col, int num){
 
 
 
+
+
 // Function that solves the sudoku and returs true or false depending on succes/or not
 bool solver(int board[SIZE][SIZE]){
+    int row, col;
+    bool empty_found = false;
+    
+    // Find an empty cell (0 represents empty).
+    for (row = 0; row < SIZE; row++) {
+        for (col = 0; col < SIZE; col++) {
+            if (board[row][col] == 0) {
+                empty_found = true;
+                goto FIND_EMPTY_EXIT;
+            }
+        }
+    }
+FIND_EMPTY_EXIT:
 
+    // If no empty cell is found, we've solved the board.
+    if (!empty_found)
+        return true;
+    
+    // Try numbers 1 through 9.
+    for (int num = 1; num <= 9; num++) {
+        if (is_valid(board, row, col, num)) {
+            board[row][col] = num;  // Tentatively place num.
+            
+            // Recursively try to solve the rest of the board.
+            if (solve_sudoku(board))
+                return true;
+            
+            // If placing num doesn't lead to a solution, reset the cell.
+            board[row][col] = 0;
+        }
+    }
+    
+    // Trigger backtracking.
+    return false;
 
 }
 
