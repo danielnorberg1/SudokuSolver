@@ -1,17 +1,20 @@
-#include <stdlib.h>
+#include <stdlib.h> // Icludes necessary libraries
 #include <stdio.h>
 #include <time.h>
 #include <stdbool.h>
 
-#define SIZE 9
+#define SIZE 9 // defines the size of the sudoku board to 9
 
 // This function prints the sudoku board
+// and takes the board as argument
 void printBoard(int board[SIZE][SIZE]){
-    for(int i=0; i<SIZE; i++){
+    // this is a nested loop to make sure that the loops iterates through 
+    // the 2d array correctly, i for horizontal and j for vertical
+    for(int i=0; i<SIZE; i++){ 
         for(int j=0; j < SIZE; j++){
             printf("%d", board[i][j]);
         }
-        printf("\n");
+        printf("\n"); // Adds \n after each horizontal row to make it print as we want it to
     }
 
 
