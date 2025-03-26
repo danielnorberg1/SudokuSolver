@@ -91,7 +91,7 @@ FIND_EMPTY_EXIT:
 int main(){
 
 
-srand(time(NULL));
+
 
 // Here we create the sudoku
 // Right now we create it manually so take one from the internet
