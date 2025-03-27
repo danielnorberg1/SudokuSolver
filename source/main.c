@@ -93,6 +93,7 @@ int main(){
 
 
 
+
 // Here we create the sudoku
 // Right now we create it manually so take one from the internet
 // or make it yourself
@@ -111,6 +112,14 @@ int board[SIZE][SIZE]= {
 
 
 };
+
+
+printBoard(board);
+
+solver(board);
+
+
+printBoard(board);
 
 
 
