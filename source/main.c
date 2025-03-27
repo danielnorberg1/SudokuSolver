@@ -69,11 +69,11 @@ FIND_EMPTY_EXIT:
     
     // Try numbers 1 through 9.
     for (int num = 1; num <= 9; num++) {
-        if (is_valid(board, row, col, num)) {
+        if (isValid(board, row, col, num)) {
             board[row][col] = num;  // Tentatively place num.
             
             // Recursively try to solve the rest of the board.
-            if (solve_sudoku(board))
+            if (solver(board))
                 return true;
             
             // If placing num doesn't lead to a solution, reset the cell.
@@ -111,9 +111,6 @@ int board[SIZE][SIZE]= {
 
 
 };
-
-// Prints board
-printBoard(board);
 
 
 
