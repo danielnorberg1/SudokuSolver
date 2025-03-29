@@ -114,11 +114,13 @@ int board[SIZE][SIZE]= {
 };
 
 
+// Here we print the board before being solved
 printBoard(board);
 
+// Here we use to solve function to solve the board
 solver(board);
 
-
+// Here we print the board after it being solved
 printBoard(board);
 
 
