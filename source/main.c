@@ -12,7 +12,7 @@ void printBoard(int board[SIZE][SIZE]){
     // the 2d array correctly, i for horizontal and j for vertical
     for(int i=0; i<SIZE; i++){ 
         for(int j=0; j < SIZE; j++){
-            printf("%d", board[i][j]);
+            printf("%d ", board[i][j]);
         }
         printf("\n"); // Adds \n after each horizontal row to make it print as we want it to
     }
