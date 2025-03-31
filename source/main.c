@@ -1,6 +1,5 @@
 #include <stdlib.h> // Icludes necessary libraries
 #include <stdio.h>
-#include <time.h>
 #include <stdbool.h>
 
 #define SIZE 9 // defines the size of the sudoku board to 9
