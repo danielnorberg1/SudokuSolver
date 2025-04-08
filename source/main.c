@@ -16,6 +16,7 @@ void printBoard(int board[SIZE][SIZE]){
         printf("\n"); // Adds \n after each horizontal row to make it print as we want it to
     }
 
+    printf("\n");
 
 }
 
